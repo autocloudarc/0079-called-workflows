@@ -1,0 +1,14 @@
+name: called-workflow-brn
+
+on:
+  workflow_call:
+
+jobs:
+  scenario:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: show-scenario
+        run: |
+          echo "CURRENT WORKFLOW: ${{ github.workflow }}"
+          echo "Scenaros: Call workflow in different repository using branches"

@@ -1,4 +1,4 @@
-name: called-workflow-tag
+name: called-workflow-cmt
 
 on:
   workflow_call:
@@ -11,4 +11,4 @@ jobs:
       - name: show-scenario
         run: |
           echo "CURRENT WORKFLOW: ${{ github.workflow }}"
-          echo "Running workflow scenario tags"
+          echo "Scenaros: Call workflow in different repository using commits"
