@@ -1,0 +1,14 @@
+name: called-workflow-tag
+
+on:
+  workflow_call:
+
+jobs:
+  scenario:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: show-scenario
+        run: |
+          echo "CURRENT WORKFLOW: ${{ github.workflow }}"
+          echo "Running workflow scenario tags"
