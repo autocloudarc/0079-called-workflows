@@ -11,4 +11,4 @@ jobs:
       - name: show-scenario
         run: |
           echo "CURRENT WORKFLOW: ${{ github.workflow }}"
-          echo "Scenaros: Call workflow in different repository using commits"
+          echo "Scenario: Call workflow in different repository using commits"

@@ -11,6 +11,4 @@ jobs:
       - name: show-scenario
         run: |
           echo "CURRENT WORKFLOW: ${{ github.workflow }}"
-          echo "Scenaros: Call workflow in different repository using tags"
-
-      
+          echo "Scenario: Call workflow in different repository using tags"
