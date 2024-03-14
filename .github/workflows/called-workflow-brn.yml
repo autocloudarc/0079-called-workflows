@@ -16,5 +16,5 @@ jobs:
       - name: show-scenario
         run: |
           echo "CURRENT WORKFLOW: ${{ github.workflow }}"
-          echo "INPUTS: ${{ inputs.operation }}"
+          echo "INPUTS: ${{ github.events.inputs.operation }}"
           echo "Scenario: Call workflow in different repository using branches"
