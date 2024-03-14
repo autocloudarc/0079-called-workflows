@@ -7,17 +7,7 @@ on:
       required: true
       default: 'deploy'
       type: string
-  secrets:
-    AZURE_CLIENT_ID:
-      description: 'The Azure client ID'
-      required: true
-    AZURE_TENANT_ID:
-      description: 'The Azure tenant ID'
-      required: true
-    AZURE_SUBSCRIPTION_ID:
-      description: 'The Azure subscription ID'
-      required: true
-
+      
 jobs:
   scenario:
     runs-on: ubuntu-latest
@@ -27,6 +17,3 @@ jobs:
           echo "Scenario: Call workflow in different repository using tags"
           echo "CURRENT WORKFLOW: ${{ github.workflow }}"
           echo "Operation: ${{ github.event.inputs.operation }}"
-          echo "Azure Client ID: ${{ secrets.AZURE_CLIENT_ID }}"
-          echo "Azure Tenant ID: ${{ secrets.AZURE_TENANT_ID }}"
-          echo "Azure Subscription ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}"
