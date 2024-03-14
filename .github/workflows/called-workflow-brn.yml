@@ -2,13 +2,19 @@ name: called-workflow-brn
 
 on:
   workflow_call:
+    inputs:
+      operation:
+        description: 'The operation to perform'
+        required: true
+        default: 'deploy'
+        type: string
 
 jobs:
   scenario:
     runs-on: ubuntu-latest
     steps:
-
       - name: show-scenario
         run: |
           echo "CURRENT WORKFLOW: ${{ github.workflow }}"
+          echo "INPUTS: ${{ inputs.operation }}"
           echo "Scenario: Call workflow in different repository using branches"
